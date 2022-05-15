@@ -19,8 +19,11 @@
     "@emotion/styled": "^11.8.1",
     "gatsby": "^4.14.0",
     "gatsby-plugin-emotion": "^7.14.0",
+    "gatsby-plugin-sass": "^5.14.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "sass": "^1.51.0",
+    "usehooks-ts": "^2.5.2"
   },
   "devDependencies": {
     "@types/node": "^17.0.31",

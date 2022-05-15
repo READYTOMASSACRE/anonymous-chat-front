@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Source+Code+Pro:wght@600;700&family=Space+Mono&display=swap')
+
+body
+    font-family: 'Space Mono', monospace
+    letter-spacing: 2px
+    font-weight: 700
+    background: black
+    padding: 0
+    margin: 0
+    user-select: none
+    & p, & span
+        word-break: break-all
+        overflow-wrap: break-word
+        white-space: break-spaces
+
+pre
+    background: black
+    color: limegreen
+    font-family: inherit
+    padding: 1px
+
+pre.caret-bar > span.caret
+    animation: blink 1s step-end infinite
+    border-left: 7px solid limegreen
+
+@keyframes blink
+    from,
+    to
+        border-color: transparent
+    50%
+        border-color: limegreen
+
+.wrapper
+    padding: 32px
+    color: limegreen
+    text-transform: uppercase
+    & .input
+        cursor: text
+    & input
+        color: inherit
+        font-family: inherit
+        letter-spacing: inherit
+        text-transform: inherit
+        font-weight: inherit
+        font-size: inherit
+        background: inherit
+        border-style: none
+        caret-color: transparent
+        width: 10vh
+        opacity: 0
+        &:active, &:focus, &:focus-visible
+            outline: none
+        &::selection
+            color: black
+            background: limegreen
