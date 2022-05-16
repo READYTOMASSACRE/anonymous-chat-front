@@ -17,7 +17,6 @@ export const Wrapper = function () {
     const divRef = useRef<HTMLDivElement>(null)
     const [roomName] = useState(window.location.pathname)
 
-    console.log(window.location)
     const setHistoryWrapper = (message: string, self?: boolean) => {
         setHistory(history => {
             if (history.length + 1 > MAX_HISTORY_SIZE) {
