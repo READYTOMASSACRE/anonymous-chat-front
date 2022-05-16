@@ -5,7 +5,10 @@ const config: GatsbyConfig = {
     title: `consolewrite`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-emotion", "gatsby-plugin-sass"]
+  plugins: [
+    "gatsby-plugin-emotion",
+    "gatsby-plugin-sass",
+  ],
 };
 
 export default config;

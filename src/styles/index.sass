@@ -13,7 +13,13 @@ body
         word-break: break-all
         overflow-wrap: break-word
         white-space: break-spaces
-
+    &::-webkit-scrollbar
+        width: 0.6em
+    &::-webkit-scrollbar-track
+        box-shadow: inset 0 0 0.1em rgba(50, 205, 50, .2)
+    &::-webkit-scrollbar-thumb
+        border-radius: 5px
+        background-color: rgba(50, 205, 50, .5)
 pre
     background: black
     color: limegreen
@@ -45,7 +51,8 @@ pre.caret-bar > span.caret
         background: inherit
         border-style: none
         caret-color: transparent
-        width: 10vh
+        width: 0
+        height: 0
         opacity: 0
         &:active, &:focus, &:focus-visible
             outline: none
