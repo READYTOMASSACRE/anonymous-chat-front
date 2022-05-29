@@ -11,18 +11,17 @@ interface Message {
 }
 
 const MAX_HISTORY_SIZE = 100
+const isBrowser = typeof window !== 'undefined'
 
 export const Wrapper = function () {
     const [history, setHistory] = useState<Message[]>([])
     const divRef = useRef<HTMLDivElement>(null)
-    const [roomName] = useState(window.location.pathname)
+    const [roomName] = useState(isBrowser ? window.location.pathname : 'index')
 
     const setHistoryWrapper = (message: string, self?: boolean) => {
         setHistory(history => {
-            if (history.length + 1 > MAX_HISTORY_SIZE) {
-                const [,...newHistory] = history
-                history = newHistory
-            }
+            if (history.length + 1 > MAX_HISTORY_SIZE)
+                [,...history] = history
 
             return [...history, { message, self, key: nanoid(8) }]
         })

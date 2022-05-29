@@ -29,7 +29,7 @@ export const Input = function({ onSubmit }: InputArgs) {
                 value={input}
                 onPaste={e => e.preventDefault()}
                 onChange={e => setInput(e.target.value)}
-                onKeyDown={e => {
+                onKeyUp={e => {
                     if (submit[e.key]) {
                         onSubmit(input)
                         setInput('')
